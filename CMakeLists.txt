@@ -118,6 +118,7 @@ catkin_package(
 ## Your package locations should be listed before other locations
 include_directories(
  include
+   home/user/catkin_ws/src/robot_info/include/robot_info
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -135,7 +136,7 @@ add_library(robot_info_lib
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(robot_info_node src/robot_info_main.cpp src/robot_info_class.cpp)
-add_executable(agv_robot_info_node src/agv_robot_info_main.cpp src/agv_robot_info_class.cpp)
+add_executable(agv_robot_info_node src/agv_robot_info_main.cpp src/agv_robot_info_class.cpp src/hydraulic_system_monitor.cpp)
 
 
 ## Rename C++ executable without prefix
